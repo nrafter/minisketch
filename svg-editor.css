@@ -166,8 +166,6 @@ select {
 	bottom: 40px;
 	right: 14px;
 	background-color: #A0A0A0;
-	border: 1px solid #808080;
-	overflow: auto;
 	text-align: center;
 }
 
