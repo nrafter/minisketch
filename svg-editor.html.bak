@@ -49,46 +49,6 @@
   <script src="svg-editor.js"></script>
   <script src="locale/locale.js"></script>
   <script src="contextmenu.js"></script>
-    
-    <script>
-        setTimeout(function() {
-            $('#rulers, #sidepanels, #main_button, #tools_top, #cur_context_panel, #tools_left, #tools_bottom, #option_lists, #color_picker, #class #tools_flyout').remove();
-
-            //disable top, bottom, left, right on workarea
-            var workarea = $('#workarea');
-            workarea.css('top', 0);
-            workarea.css('bottom', 0);
-            workarea.css('right', 0);
-            workarea.css('left', 0);
-            workarea.css('overflow', '');
-
-            //set body margin to 0
-            $('body').css('margin', 0);
-
-            //svgcanvas width and height to 200
-            var svgcanvas = $('#svgcanvas');
-            svgcanvas.css('height', 200);
-            svgcanvas.css('width', 200);
-            svgcanvas.css('display', 'block');
-            
-            //set svgroot height and width actual attribute to 200 and x and y to 0 and erase overflow attribute
-            var svgroot = $('#svgroot');
-            svgroot.attr('height', 200);
-            svgroot.attr('width', 200);
-            svgroot.attr('x', 200);
-            svgroot.attr('y', 200);
-            svgroot.removeAttr('overflow');
-            
-            //set canvasBackground width and height actual attribute to 200 and erase overflow attribute and set x and y to 0
-            var canvasBackground = $('#canvasBackground');
-            canvasBackground.attr('height', 200);
-            canvasBackground.attr('width', 200);
-            canvasBackground.attr('y', 0);
-            canvasBackground.attr('x', 0);
-            canvasBackground.removeAttr('overflow');
-        }, 1000);
-        
-    </script>
 
 
 <!-- If you do not wish to add extensions by URL, you can load them
