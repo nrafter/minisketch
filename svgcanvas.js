@@ -1302,6 +1302,7 @@ var getMouseTarget = this.getMouseTarget = function(evt) {
 	// - when we are in select mode, select the element, remember the position
 	// and do nothing else
 	var mouseDown = function(evt) {
+    parent.postMessage('deselect', 'http://localhost:3000');
 		if (canvas.spaceKey || evt.button === 1) {return;}
 
 		var right_click = evt.button === 2;

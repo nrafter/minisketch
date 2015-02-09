@@ -240,6 +240,7 @@ svgEditor.addExtension('shapes', function() {'use strict';
 			});
 		},
 		mouseDown: function(opts) {
+      current_d = window.current_d;
 			var mode = canv.getMode();
 			if (mode !== mode_id) {return;}
 
