@@ -796,7 +796,7 @@ TO-DOS
 				undoMgr = svgCanvas.undoMgr,
 				defaultImageURL = curConfig.imgPath + 'logo.png',
 				workarea = $('#workarea'),
-				canv_menu = $('#cmenu_canvas'),
+				canv_menu = $('#cmenu_minicanvas'),
 				// layer_menu = $('#cmenu_layers'), // Unused
 				exportWindow = null,
 				zoomInIcon = 'crosshair',
@@ -1551,7 +1551,7 @@ TO-DOS
 				var unit = curConfig.baseUnit !== 'px' ? curConfig.baseUnit : null;
 
 				var is_node = currentMode == 'pathedit'; //elem ? (elem.id && elem.id.indexOf('pathpointgrip') == 0) : false;
-				var menu_items = $('#cmenu_canvas li');
+				var menu_items = $('#cmenu_minicanvas li');
 				$('#selected_panel, #multiselected_panel, #g_panel, #rect_panel, #circle_panel,'+
 					'#ellipse_panel, #line_panel, #text_panel, #image_panel, #container_panel,'+
 					' #use_panel, #a_panel').hide();
@@ -4738,7 +4738,7 @@ TO-DOS
 				.val(svgCanvas.getZoom() * 100);
 
 			$('#workarea').contextMenu({
-					menu: 'cmenu_canvas',
+					menu: 'cmenu_minicanvas',
 					inSpeed: 0
 				},
 				function(action, el, pos) {

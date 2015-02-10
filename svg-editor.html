@@ -35,7 +35,7 @@
   <script src="contextmenu/jquery.contextMenu.js"></script>
   <script src="browser.js"></script>
   <script src="svgtransformlist.js"></script>
-  <script src="math.js"></script>
+  <script src="math.js"></script> 
   <script src="units.js"></script>
   <script src="svgutils.js"></script>
   <script src="sanitize.js"></script>
@@ -53,19 +53,18 @@
     <script>
         setTimeout(function() {
             $('#rulers, #sidepanels, #main_button, #tools_top, #cur_context_panel, #tools_left, #tools_bottom, #option_lists, #color_picker, #class #tools_flyout').remove();
-
-            //svgCanvas.clear();
             
             var eventHandler = {};
             
             eventHandler.copy = function (eventData) {
+                
+                svgCanvas.copySelectedElements();
                 svgCanvas.copySelectedElements();
                 event.source.postMessage(svgCanvas.svgToString(svgCanvas.clipBoard[0]), event.origin);
             };
             
             eventHandler.setMode = function(eventData) {
                 if(eventData[1] === 'browser_window' || eventData[1] === 'button_template' || eventData[1] === 'ui-elements' || eventData[1] === 'shapelib') {
-                    debugger;
                     window.current_d = eventData[2];
                     svgCanvas.setMode('shapelib');
                     return;
@@ -853,7 +852,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 	</div>
 </div>
 
-<ul id="cmenu_canvas" class="contextMenu">
+<ul id="cmenu_minicanvas" class="contextMenu">
 	<li><a href="#delete">Delete</a></li>
 </ul>
 
